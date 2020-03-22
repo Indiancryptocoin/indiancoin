@@ -1,0 +1,8 @@
+/usr/bin/indiancoin-cli		--	gen_context(system_u:object_r:indiancoin_exec_t,s0)
+/usr/sbin/indiancoind		--	gen_context(system_u:object_r:indiancoin_exec_t,s0)
+/usr/lib(64)?/indiancoin/indiancoind		--	gen_context(system_u:object_r:indiancoin_exec_t,s0)
+
+/etc/indiancoin(/.*)?		gen_context(system_u:object_r:indiancoin_conf_t,s0)
+/var/lib/indiancoin(/.*)?		gen_context(system_u:object_r:indiancoin_var_lib_t,s0)
+
+(/var)?/run/indiancoind(/.*)?   gen_context(system_u:object_r:indiancoin_var_run_t,s0)

@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/indiancoin_bg.qm</file>
+        <file alias="ca">locale/indiancoin_ca.qm</file>
+        <file alias="cs">locale/indiancoin_cs.qm</file>
+        <file alias="da">locale/indiancoin_da.qm</file>
+        <file alias="de">locale/indiancoin_de.qm</file>
+        <file alias="en">locale/indiancoin_en.qm</file>
+        <file alias="en_GB">locale/indiancoin_en_GB.qm</file>
+        <file alias="en_US">locale/indiancoin_en_US.qm</file>
+        <file alias="eo">locale/indiancoin_eo.qm</file>
+        <file alias="es">locale/indiancoin_es.qm</file>
+        <file alias="es_ES">locale/indiancoin_es_ES.qm</file>
+        <file alias="fi">locale/indiancoin_fi.qm</file>
+        <file alias="fr_FR">locale/indiancoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/indiancoin_hi_IN.qm</file>
+        <file alias="hr">locale/indiancoin_hr.qm</file>
+        <file alias="hr_HR">locale/indiancoin_hr_HR.qm</file>
+        <file alias="it">locale/indiancoin_it.qm</file>
+        <file alias="ja">locale/indiancoin_ja.qm</file>
+        <file alias="ko_KR">locale/indiancoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/indiancoin_lt_LT.qm</file>
+        <file alias="nl">locale/indiancoin_nl.qm</file>
+        <file alias="pl">locale/indiancoin_pl.qm</file>
+        <file alias="pt">locale/indiancoin_pt.qm</file>
+        <file alias="pt_BR">locale/indiancoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/indiancoin_ro_RO.qm</file>
+        <file alias="ru">locale/indiancoin_ru.qm</file>
+        <file alias="sk">locale/indiancoin_sk.qm</file>
+        <file alias="sv">locale/indiancoin_sv.qm</file>
+        <file alias="tr">locale/indiancoin_tr.qm</file>
+        <file alias="uk">locale/indiancoin_uk.qm</file>
+        <file alias="vi">locale/indiancoin_vi.qm</file>
+        <file alias="zh_CN">locale/indiancoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/indiancoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

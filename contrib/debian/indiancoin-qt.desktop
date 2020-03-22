@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=INDIANCOIN Core
+Comment=INDIANCOIN P2P Cryptocurrency
+Comment[fr]=INDIANCOIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=INDIANCOIN, eşten eşe kriptografik sanal para birimi
+Exec=indiancoin-qt %u
+Terminal=false
+Type=Application
+Icon=indiancoin128
+MimeType=x-scheme-handler/indiancoin;
+Categories=Office;Finance;
+StartupWMClass=IndianCoin-qt

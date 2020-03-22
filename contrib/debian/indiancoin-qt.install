@@ -1,0 +1,6 @@
+usr/local/bin/indiancoin-qt usr/bin
+share/pixmaps/indiancoin32.xpm usr/share/pixmaps
+share/pixmaps/indiancoin16.xpm usr/share/pixmaps
+share/pixmaps/indiancoin128.png usr/share/pixmaps
+debian/indiancoin-qt.desktop usr/share/applications
+debian/indiancoin-qt.protocol usr/share/kde4/services/

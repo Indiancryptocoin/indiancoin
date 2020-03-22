@@ -1,0 +1,81 @@
+policy_module(indiancoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type indiancoin_t;
+type indiancoin_exec_t;
+init_daemon_domain(indiancoin_t, indiancoin_exec_t)
+
+permissive indiancoin_t;
+
+type indiancoin_initrc_exec_t;
+init_script_file(indiancoin_initrc_exec_t)
+
+type indiancoin_conf_t;
+files_type(indiancoin_conf_t)
+
+type indiancoin_var_lib_t;
+files_type(indiancoin_var_lib_t)
+
+type indiancoin_var_run_t;
+files_type(indiancoin_var_run_t)
+
+type indiancoin_port_t;
+corenet_port(indiancoin_port_t)
+
+########################################
+#
+# indiancoin local policy
+#
+allow indiancoin_t self:process { fork };
+
+allow indiancoin_t self:fifo_file rw_fifo_file_perms;
+allow indiancoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(indiancoin_t, indiancoin_conf_t, indiancoin_conf_t)
+manage_files_pattern(indiancoin_t, indiancoin_conf_t, indiancoin_conf_t)
+
+manage_dirs_pattern(indiancoin_t, indiancoin_var_lib_t, indiancoin_var_lib_t)
+manage_files_pattern(indiancoin_t, indiancoin_var_lib_t, indiancoin_var_lib_t)
+files_var_lib_filetrans(indiancoin_t, indiancoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(indiancoin_t, indiancoin_var_run_t, indiancoin_var_run_t)
+manage_files_pattern(indiancoin_t, indiancoin_var_run_t, indiancoin_var_run_t)
+
+sysnet_dns_name_resolve(indiancoin_t)
+corenet_all_recvfrom_unlabeled(indiancoin_t)
+
+allow indiancoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(indiancoin_t)
+corenet_tcp_sendrecv_generic_node(indiancoin_t)
+corenet_tcp_sendrecv_all_ports(indiancoin_t)
+corenet_tcp_bind_generic_node(indiancoin_t)
+
+gen_require(`
+    type indiancoin_port_t;
+')
+allow indiancoin_t indiancoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type indiancoin_port_t;
+')
+allow indiancoin_t indiancoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(indiancoin_t)
+
+files_read_etc_files(indiancoin_t)
+
+miscfiles_read_localization(indiancoin_t)
+
+sysnet_dns_name_resolve(indiancoin_t)
+
+allow indiancoin_t indiancoin_exec_t:file execute_no_trans;
+allow indiancoin_t self:process setsched;
+corecmd_exec_ls(indiancoin_t)
+corenet_tcp_connect_http_port(indiancoin_t)
+dev_read_urand(indiancoin_t)
+fs_getattr_xattr_fs(indiancoin_t)
+kernel_read_system_state(indiancoin_t)

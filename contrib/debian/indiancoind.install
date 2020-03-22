@@ -1,0 +1,3 @@
+usr/local/bin/indiancoind usr/bin
+usr/local/bin/indiancoin-cli usr/bin
+debian/examples/indiancoin.conf etc/indiancoin
